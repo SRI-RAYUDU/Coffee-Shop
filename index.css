@@ -331,7 +331,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(Coffee/pexels-jayoke-851555.jpg) no-repeat;
+    background: url(./Coffee/pexels-jayoke-851555.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
