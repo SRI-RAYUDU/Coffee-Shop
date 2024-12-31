@@ -122,25 +122,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  function toggleProductContent(productBox) {
-    const content = productBox.querySelector('.content');
-    const image = productBox.querySelector('.image');
-    const stars = productBox.querySelector('.stars');
-    const price = productBox.querySelector('.price');
+ // Toggle product details when eye icon is clicked
+function toggleProductContent(productBox) {
+  const content = productBox.querySelector('.content');
+  const image = productBox.querySelector('.image');
+  const stars = productBox.querySelector('.stars');
+  const price = productBox.querySelector('.price');
 
-    const isVisible = content.style.display !== 'none'; 
-    content.style.display = isVisible ? 'none' : 'flex';
-    image.style.display = isVisible ? 'none' : 'block';
-    stars.style.display = isVisible ? 'none' : 'flex';
-    price.style.display = isVisible ? 'none' : 'block';
-  }
+  const isVisible = content.style.display !== 'none'; 
+  
+  // Toggle visibility of product details in block
+  content.style.display = isVisible ? 'none' : 'block';
+  image.style.display = isVisible ? 'none' : 'block';
+  stars.style.display = isVisible ? 'none' : 'block';
+  price.style.display = isVisible ? 'none' : 'block';
+}
 
-  eyeIcons.forEach(icon => {
-    icon.addEventListener('click', (event) => {
-      const productBox = event.target.closest('.box');
+// Event listener for eye icons
+eyeIcons.forEach(icon => {
+  icon.addEventListener('click', (e) => {
+      const productBox = e.target.closest('.box');
       toggleProductContent(productBox);
-    });
   });
+});
+
 
   function searchMenuItems() {
     const searchQuery = searchBox.value.trim().toLowerCase();
