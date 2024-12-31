@@ -505,9 +505,9 @@ section {
     height:50px;
     width:50px;
 }
-#imges{
+/* #imges{
     margin-top: 29px;
-}
+} */
 .contact .row{
     display:flex;
     align-items:center;
@@ -676,9 +676,9 @@ section {
     color: #ccc;
     padding: 1rem 0;
 }
-#btns{
+/* #btns{
  margin-top: 40px;
-}
+} */
 
 .blogs .box-container .box .content a {
     margin-top: 10px;
