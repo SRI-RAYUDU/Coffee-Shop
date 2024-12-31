@@ -306,7 +306,7 @@ section {
     color: var(--main-color);
 }
 
-/* Checkout Button */
+
 .header .cart-items-container #checkout-btn {
     width: 50%;
     height: 40px;

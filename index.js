@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartTotalPrice = document.querySelector('#cart-total-price');
   const checkoutBtn = document.querySelector('#checkout-btn');
   const addToCartButtons = document.querySelectorAll('.menu .box .btn');
-  const productCartLinks = document.querySelectorAll('.products .box .fas.fa-shopping-cart'); // Cart links
-  const shareLinks = document.querySelectorAll('.products .box .fas.fa-share'); // Share links
-  const eyeIcons = document.querySelectorAll('.products .box .fas.fa-eye'); // Eye icons
+  const productCartLinks = document.querySelectorAll('.products .box .fas.fa-shopping-cart'); 
+  const shareLinks = document.querySelectorAll('.products .box .fas.fa-share');
+  const eyeIcons = document.querySelectorAll('.products .box .fas.fa-eye'); 
 
   let totalItems = 0;
   let totalPrice = 0;
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkoutBtn.style.display = totalItems > 0 ? 'block' : 'none';
 
-    // Remove item from cart
+
     cartItem.querySelector('.remove-item').addEventListener('click', () => {
       cartItem.remove();
       totalItems--;
