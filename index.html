@@ -299,10 +299,8 @@
                 loading="lazy"
                 allowfullscreen
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=hyderabad&zoom=10&maptype=roadmap"
-              ></iframe
-              ><a href="https://www.taxuni.com/passport-renewal-form/"
-                >Passport Renewal Forms Printable</a
-              ><style>
+              ></iframe>
+              <style>
                 .mapswrapper {
                   background: #fff;
                   position: relative;
@@ -321,22 +319,27 @@
                 }
               </style>
             </div>
-            <form action="">
-              <h3>get in touch</h3>
+            <form id="contactForm">
+              <h3>Get in touch</h3>
               <div class="inputBox">
                 <span class="fas fa-user"></span>
-                <input type="text" placeholder="name" />
+                <input type="text" placeholder="Name" id="name" required />
               </div>
               <div class="inputBox">
                 <span class="fas fa-envelope"></span>
-                <input type="email" placeholder="email" />
+                <input type="email" placeholder="Email" id="email" required />
               </div>
               <div class="inputBox">
                 <span class="fas fa-phone"></span>
-                <input type="number" placeholder="number" />
+                <input type="number" placeholder="Number" id="number" required />
               </div>
-              <input type="submit" value="contact now" class="btn" />
+              <input type="submit" value="Contact Now" class="btn" />
+              
+              <div id="successMessage" class="successMessage" style="display:none;"></div>
             </form>
+            
+            <div id="contact-now-btn"></div>
+            
           </div>
         </section>
 

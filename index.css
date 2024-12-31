@@ -518,37 +518,104 @@ section {
     object-fit:cover;
     
 }
-.contact .row form{
-    flex:1 1 45rem;
-    padding:5rem 2rem;
-    text-align:center;
-}
-.contact .row form h3{
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .contact .row form h3 {
     text-transform: uppercase;
-    font-size:3.5rem;
+    font-size: 3.5rem;
     color: var(--main-color);
-}
-.contact .row form .inputBox{
-    display:flex;
+  }
+  
+  .contact .row form .inputBox {
+    display: flex;
     align-items: center;
-    margin-top:2rem;
-    margin-bottom:2rem;
-    background:var(--black);
-    border:var(--border);
-}
-.contact .row form .inputBox span{
-    color:#fff;
-    font-size:2rem;
-    padding-left:2rem;
-}
-.contact .row form .inputBox input{
-    width:100%;
-    padding:2rem;
-    font-size:1.7rem;
-    color:#fff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--black);
+    border: var(--border);
+  }
+  
+  .contact .row form .inputBox span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .contact .row form .inputBox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
     text-transform: none;
-    background:none;
-}
+    background: none;
+  }
+  
+ 
+  form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .inputBox {
+    margin-bottom: 15px;
+  }
+  
+  .inputBox input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #contactForm .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .successMessage {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+
+  .fas {
+    margin-right: 10px;
+  }
+  
+
+  .successMessage.alert-style {
+    animation: fadeInOut 3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  
 .blogs .box-container{
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
@@ -572,6 +639,9 @@ section {
 }
 .blogs .box-container .box .content{
     padding:2rem;
+}
+#blogs .content .btn{
+    background-color: #4CAF50;
 }
 .blogs .box-container .box .content .title{
    font-size:2.5rem;

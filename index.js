@@ -13,14 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartTotalPrice = document.querySelector('#cart-total-price');
   const checkoutBtn = document.querySelector('#checkout-btn');
   const addToCartButtons = document.querySelectorAll('.menu .box .btn');
-  const productCartLinks = document.querySelectorAll('.products .box .fas.fa-shopping-cart'); 
+  const productCartLinks = document.querySelectorAll('.products .box .fas.fa-shopping-cart');
   const shareLinks = document.querySelectorAll('.products .box .fas.fa-share');
   const eyeIcons = document.querySelectorAll('.products .box .fas.fa-eye');
 
+  const contactNowBtn = document.querySelector('#contact-now-btn');  
+  const form = document.querySelector('#contactForm'); 
+  const successMessage = document.querySelector('#successMessage'); 
 
   let totalItems = 0;
   let totalPrice = 0;
-
 
   function closeAll() {
     navbar.classList.remove('active');
@@ -30,20 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
     suggestionsContainer.style.display = 'none';
   }
 
- 
   menuBtn.addEventListener('click', () => {
     const isActive = navbar.classList.contains('active');
     closeAll();
     if (!isActive) navbar.classList.add('active');
   });
 
-
   searchBtn.addEventListener('click', () => {
     const isActive = searchForm.classList.contains('active');
     closeAll();
     if (!isActive) searchForm.classList.add('active');
   });
-
 
   cartBtn.addEventListener('click', () => {
     const isActive = cartContainer.classList.contains('active');
@@ -63,12 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
   function updateCartInfo() {
     cartItemCount.textContent = totalItems;
     cartTotalPrice.textContent = `₹${totalPrice.toFixed(2)}`;
   }
-
 
   function addToCart(itemName, itemPrice, itemImageSrc) {
     const cartItem = document.createElement('div');
@@ -85,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cartItemsContainer.appendChild(cartItem);
     totalItems++;
     totalPrice += itemPrice;
-
 
     checkoutBtn.style.display = totalItems > 0 ? 'block' : 'none';
 
@@ -126,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   function toggleProductContent(productBox) {
     const content = productBox.querySelector('.content');
     const image = productBox.querySelector('.image');
@@ -140,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
     price.style.display = isVisible ? 'none' : 'block';
   }
 
-
   eyeIcons.forEach(icon => {
     icon.addEventListener('click', (event) => {
       const productBox = event.target.closest('.box');
@@ -148,28 +142,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   function searchMenuItems() {
     const searchQuery = searchBox.value.trim().toLowerCase();
     suggestionsContainer.innerHTML = '';
     suggestionsContainer.style.display = 'none';
-  
+
     if (searchQuery) {
       const menuItems = document.querySelectorAll('.menu .box');
       const foundItems = Array.from(menuItems).filter(item => {
         const itemName = item.querySelector('h3').textContent.toLowerCase();
         return itemName.includes(searchQuery);
       });
-  
+
       if (foundItems.length > 0) {
         suggestionsContainer.style.display = 'block';
         foundItems.forEach(item => {
           const suggestionItem = document.createElement('div');
           suggestionItem.classList.add('suggested-item');
-  
-
           const mainPrice = item.querySelector('.price').childNodes[0].textContent.trim();
-  
+
           suggestionItem.innerHTML = `
             <img src="${item.querySelector('img').src}" alt="${item.querySelector('h3').textContent}">
             <h3>${item.querySelector('h3').textContent}</h3>
@@ -183,14 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-  
-
 
   searchIcon.addEventListener('click', searchMenuItems);
 
-
   searchBox.addEventListener('input', searchMenuItems);
-
 
   checkoutBtn.addEventListener('click', () => {
     let totalPriceInCart = 0;
@@ -204,11 +191,33 @@ document.addEventListener('DOMContentLoaded', () => {
     if (totalPriceContainer) {
       totalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(2)}`;
     } else {
-
       const newTotalPriceContainer = document.createElement('div');
       newTotalPriceContainer.classList.add('total-price');
       newTotalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(2)}`;
       cartContainer.appendChild(newTotalPriceContainer);
     }
+  });
+
+ 
+  contactNowBtn.addEventListener('click', () => {
+    form.style.display = 'block'; 
+  });
+
+ 
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    
+    successMessage.style.display = 'block';
+    successMessage.textContent = "Success! We will get back to you."; 
+    successMessage.classList.add('alert-style'); 
+
+    
+    setTimeout(() => {
+      successMessage.style.display = 'none';
+    }, 3000);
+
+   
+    form.reset();
   });
 });
