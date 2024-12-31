@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   const menuBtn = document.querySelector('#menu-btn');
   const searchBtn = document.querySelector('#search-btn');
   const cartBtn = document.querySelector('#cart-btn');
@@ -16,10 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const addToCartButtons = document.querySelectorAll('.menu .box .btn');
   const productCartLinks = document.querySelectorAll('.products .box .fas.fa-shopping-cart'); 
   const shareLinks = document.querySelectorAll('.products .box .fas.fa-share');
-  const eyeIcons = document.querySelectorAll('.products .box .fas.fa-eye'); 
+  const eyeIcons = document.querySelectorAll('.products .box .fas.fa-eye');
+
 
   let totalItems = 0;
   let totalPrice = 0;
+
 
   function closeAll() {
     navbar.classList.remove('active');
@@ -29,13 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
     suggestionsContainer.style.display = 'none';
   }
 
+ 
   menuBtn.addEventListener('click', () => {
     const isActive = navbar.classList.contains('active');
     closeAll();
     if (!isActive) navbar.classList.add('active');
   });
 
- 
+
   searchBtn.addEventListener('click', () => {
     const isActive = searchForm.classList.contains('active');
     closeAll();
@@ -49,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isActive) cartContainer.classList.add('active');
     updateCartInfo();
   });
-
 
   document.addEventListener('click', (event) => {
     if (
@@ -85,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     totalItems++;
     totalPrice += itemPrice;
 
-    checkoutBtn.style.display = totalItems > 0 ? 'block' : 'none';
 
+    checkoutBtn.style.display = totalItems > 0 ? 'block' : 'none';
 
     cartItem.querySelector('.remove-item').addEventListener('click', () => {
       cartItem.remove();
@@ -98,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCartInfo();
   }
-
 
   addToCartButtons.forEach(button => {
     button.addEventListener('click', (event) => {
@@ -120,12 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   shareLinks.forEach(link => {
     link.addEventListener('click', (event) => {
-      alert("Share to Button");
+      alert("Share to Button"); 
     });
   });
+
 
   function toggleProductContent(productBox) {
     const content = productBox.querySelector('.content');
@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleProductContent(productBox);
     });
   });
+
+
   function searchMenuItems() {
     const searchQuery = searchBox.value.trim().toLowerCase();
     suggestionsContainer.innerHTML = '';
@@ -165,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const suggestionItem = document.createElement('div');
           suggestionItem.classList.add('suggested-item');
   
+
           const mainPrice = item.querySelector('.price').childNodes[0].textContent.trim();
   
           suggestionItem.innerHTML = `
@@ -185,7 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   searchIcon.addEventListener('click', searchMenuItems);
 
+
   searchBox.addEventListener('input', searchMenuItems);
+
 
   checkoutBtn.addEventListener('click', () => {
     let totalPriceInCart = 0;
@@ -199,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (totalPriceContainer) {
       totalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(2)}`;
     } else {
+
       const newTotalPriceContainer = document.createElement('div');
       newTotalPriceContainer.classList.add('total-price');
       newTotalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(2)}`;
