@@ -15,406 +15,419 @@
   </head>
   <body>
     <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee-Shop</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo">
-        <img src="Coffee/iconpng.png" />
-      </a>
-     <!-- Navbar -->
-<nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#review">Review</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#blogs">Blogs</a></li>
-    </ul>
-  </nav>
-  
-      <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-shopping-cart" id="cart-btn"></div>
-        <div class="fas fa-bars" id="menu-btn"></div>
-      </div>
-      <div class="search-form">
-        <input 
-          type="text" 
-          id="search-box" 
-          placeholder="Search for coffee..." 
-          autocomplete="off" 
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coffee-Shop</title>
+        <link rel="stylesheet" href="index.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
         />
-        <button id="search-icon" class="fas fa-search"></button>
-        <div id="suggestions"></div>
-      </div>
-      
-      <div class="cart-items-container">
-        <div class="cart-items"></div>
-        <button id="checkout-btn">Checkout</button>
-      </div>
-    </header>
+      </head>
+      <body>
+        <header class="header">
+          <a href="#" class="logo">
+            <img src="Coffee/iconpng.png" />
+          </a>
+          <!-- Navbar -->
+          <nav class="navbar">
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#review">Review</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#blogs">Blogs</a></li>
+            </ul>
+          </nav>
 
-    <section class="home">
-      <div class="content">
-        <h3>fresh coffee in the morning</h3>
-        <p>
-          Step into a world where coffee meets passion and community thrives. At
-          our coffee shop, we take pride in crafting every cup with care, using
-          only the finest, ethically sourced beans to deliver the perfect blend
-          of flavor and warmth. Whether you’re here to savor a quiet moment,
-          catch up with friends, or fuel your creativity, our cozy space is
-          designed to make you feel right at home. With a menu filled with
-          signature brews, handcrafted treats, and a commitment to
-          sustainability, we aim to make every visit as delightful as the first
-          sip of your favorite coffee.
-        </p>
-        <a href="#" class="btn">get yours now</a>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <h1 class="heading"><span>About</span> Us</h1>
-      <div class="row">
-        <div class="image">
-          <img src="Coffee/FlatWhiteCoffe.webp" />
-        </div>
-        <div class="content">
-          <h3>what makes our coffee special?</h3>
-          <p>
-            Coffee’s story begins centuries ago in the ancient coffee forests of
-            Ethiopia. Legend has it that a goat herder named Kaldi discovered
-            coffee when he noticed his goats became energetic after eating
-            berries from a certain tree. This discovery sparked a journey that
-            took coffee from Africa to the Middle East, Europe, and eventually
-            the rest of the world. Today, coffee is one of the most beloved
-            beverages, connecting people across cultures with its rich aroma and
-            invigorating taste.
-          </p>
-          <a href="#" class="btn">learn more</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="menu" id="menu">
-      <h1 class="heading">Our<span> Menu</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <img src="Coffee/CafeCubanoCoffe.webp" />
-          <h3>CafeCubanoCoffe</h3>
-          <div class="price">$15.99<span>20.99</span></div>
-          <a href="#" class="btn">add to cart</a>
-        </div>
-        <div class="box">
-          <img src="Coffee/CaffeBreveCoffe.webp" />
-          <h3>CaffeBreveCoffe</h3>
-          <div class="price">$15.99<span>20.99</span></div>
-          <a href="#" class="btn">add to cart</a>
-        </div>
-        <div class="box">
-          <img src="Coffee/Cappuccinocoffe.webp" />
-          <h3>Cappuccinocoffe</h3>
-          <div class="price">$15.99<span>20.99</span></div>
-          <a href="#" class="btn">add to cart</a>
-        </div>
-        <div class="box">
-          <img src="Coffee/ColdBrewCoffe.webp" />
-          <h3>ColdBrewCoffe</h3>
-          <div class="price">$15.99<span>20.99</span></div>
-          <a href="#" class="btn">add to cart</a>
-        </div>
-        <div class="box">
-          <img src="Coffee/CortadoCoffe.webp" />
-          <h3>CortadoCoffe</h3>
-          <div class="price">$15.99<span>20.99</span></div>
-          <a href="#" class="btn">add to cart</a>
-        </div>
-        <div class="box">
-          <img src="Coffee/RafCoffe.webp" />
-          <h3>RafCoffe</h3>
-          <div class="price">$15.99<span>20.99</span></div>
-          <a href="#" class="btn">add to cart</a>
-        </div>
-      </div>
-    </section>
-    <section class="products" id="products">
-      <h1 class="heading">Our <span>Products</span></h1>
-      <div class="box-container">
-        <div class="box">
           <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-share"></a>
-            <a href="#" class="fas fa-eye"></a>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
           </div>
-          <div class="image">
-            <img src="Coffee/packging2.jpg">
+          <div class="search-form">
+            <input
+              type="text"
+              id="search-box"
+              placeholder="Search for coffee..."
+              autocomplete="off"
+            />
+            <button id="search-icon" class="fas fa-search"></button>
+            <div id="suggestions" class="suggestions-container"></div>
           </div>
-          <div class="content">
-            <h3>fresh coffee</h3>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price">$15.99<span>$20.99</span></div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-share"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="Coffee/packaging1.jpg" />
-          </div>
-          <div class="content">
-            <h3>fresh coffee</h3>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price">$15.99<span>$20.99</span></div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-share"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="Coffee/packaging3.jpg" />
-          </div>
-          <div class="content">
-            <h3>fresh coffee</h3>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price">$15.99<span>$20.99</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+          
 
-    <section class="review" id="review">
-      <h1 class="heading">Customer's <span>Review</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <img src="Coffee/quotes.jpg" alt="" class="quote" />
-          <p>
-            "The Cold Brew Delight is my go-to when I need a refreshing
-            pick-me-up. It's smooth and strong, with just the right balance of
-            sweetness. Perfect for those hot days when you want something that’s
-            both energizing and cool!"
-          </p>
-          <img src="Coffee/men1.avif" style="margin-top:28px" alt="" />
-          <h3> — James H.</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-halt-alt"></i>
+          <div class="cart-items-container">
+            <div class="cart-items"></div>
+            <button id="checkout-btn">Checkout</button>
           </div>
-        </div>
-        <div class="box">
-          <img src="Coffee/quotes.jpg" alt="" class="quote" />
-          <p>
-            "The Creamy Latte Bliss is everything I’ve been looking for in a
-            latte. It’s so creamy and smooth, with a lovely sweetness that isn’t
-            overpowering. I love how it makes me feel relaxed and energized at
-            the same time. Definitely a new favorite!"
-          </p>
-          <img src="Coffee/women3.avif" style="border-radius: 50px;" alt="" />
-          <h3>— Olivia W.</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-halt-alt"></i>
-          </div>
-        </div>
-        <div class="box">
-          <img src="Coffee/quotes.jpg" alt="" class="quote" />
-          <p>
-            "If you're serious about coffee, the Bold Black Brew is a
-            game-changer. It’s rich, full-bodied, and packs a punch. No frills,
-            just excellent coffee. It’s the only way I start my mornings." 
-          </p>
-          <img src="Coffee/men23.avif" style="margin-top:60px;border-radius:50px;" />
-          <h3>— John P.</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-halt-alt"></i>
-          </div>
-        </div>
-      </div>
-    </section>
+        </header>
 
-    <section class="contact" id="contact">
-      <h1 class="heading"><span>Contact</span> Us</h1>
-      <div class="row">
-        <div class="mapswrapper">
-          <iframe
-            width="600"
-            height="450"
-            loading="lazy"
-            allowfullscreen
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=hyderabad&zoom=10&maptype=roadmap"
-          ></iframe
-          ><a href="https://www.taxuni.com/passport-renewal-form/"
-            >Passport Renewal Forms Printable</a
-          ><style>
-            .mapswrapper {
-              background: #fff;
-              position: relative;
-            }
-            .mapswrapper iframe {
-              border: 0;
-              position: relative;
-              z-index: 2;
-            }
-            .mapswrapper a {
-              color: rgba(0, 0, 0, 0);
-              position: absolute;
-              left: 0;
-              top: 0;
-              z-index: 0;
-            }
-          </style>
-        </div>
-        <form action="">
-          <h3>get in touch</h3>
-          <div class="inputBox">
-            <span class="fas fa-user"></span>
-            <input type="text" placeholder="name" />
-          </div>
-          <div class="inputBox">
-            <span class="fas fa-envelope"></span>
-            <input type="email" placeholder="email" />
-          </div>
-          <div class="inputBox">
-            <span class="fas fa-phone"></span>
-            <input type="number" placeholder="number" />
-          </div>
-          <input type="submit" value="contact now" class="btn" />
-        </form>
-      </div>
-    </section>
-
-    <section class="blogs" id="blogs">
-      <h1 class="heading">Our <span>Blogs</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <div class="image">
-            <img src="Coffee/TurkishCoffe.webp" alt="" />
-          </div>
+        <section class="home" id="home">
           <div class="content">
-            <a href="#" class="title">Turkish Coffee</a>
-            <span>by admin/ 2st june,2024</span>
+            <h3>fresh coffee in the morning</h3>
             <p>
-              Normal coffee, or milk coffee, is a comforting classic that
-              combines the strength of brewed coffee with the creaminess of
-              milk. Sweetened to taste, it’s a perfect balance of richness and
-              smoothness, making it ideal for any time of day. From the frothy
-              cappuccino to a simple cup of coffee with milk and sugar, this
-              versatile favorite is the go-to choice for a warm, satisfying sip.
+              Step into a world where coffee meets passion and community
+              thrives. At our coffee shop, we take pride in crafting every cup
+              with care, using only the finest, ethically sourced beans to
+              deliver the perfect blend of flavor and warmth. Whether you’re
+              here to savor a quiet moment, catch up with friends, or fuel your
+              creativity, our cozy space is designed to make you feel right at
+              home. With a menu filled with signature brews, handcrafted treats,
+              and a commitment to sustainability, we aim to make every visit as
+              delightful as the first sip of your favorite coffee.
             </p>
-            <a href="#" class="btn" style="margin-top:10px">read more</a>
+            <a class="btn">get yours now</a>
           </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="Coffee/PiccoloLatteCoffe.webp" alt="" />
-          </div>
-          <div class="content">
-            <a href="#" class="title">PiccoloLatte Coffee</a>
-            <span>by admin/ 1st may,2024</span>
-            <p>
-              Cold coffee is a refreshing delight for hot days, offering a
-              chilled twist to your favorite brew. Made by blending coffee with
-              ice, milk, and sometimes a hint of sugar or flavorings like
-              vanilla or caramel, it delivers a creamy, invigorating taste.
-              Perfect as a pick-me-up or a dessert-like treat, cold coffee is
-              versatile—enjoy it with whipped cream on top or as a simple iced
-              coffee to cool down and energize your day.
-            </p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="Coffee/LongBlackCoffe.webp" alt="" />
-          </div>
-          <div class="content">
-            <a href="#" class="title">LongBlack Coffee</a>
-            <span>by admin/ 5st April,2024</span>
-            <p>
-              Black coffee is the purest form of coffee, loved for its bold,
-              robust flavor. With no milk or sugar, it highlights the true
-              essence of the coffee beans, offering a rich and aromatic
-              experience. It’s a favorite among coffee enthusiasts for its
-              simplicity and health benefits—low in calories and packed with
-              antioxidants. Whether enjoyed hot or as an iced black coffee, this
-              classic brew is perfect for those who appreciate an authentic
-              coffee experience.
-            </p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="footer">
-      <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
-      </div>
-      <div class="links">
-        <a href="#">home</a>
-        <a href="#">about</a>
-        <a href="#">menu</a>
-        <a href="#">products</a>
-        <a href="#">review</a>
-        <a href="#">contact</a>
-        <a href="#">blogs</a>
-      </div>
-      <div class="credit">
-        created by <span>mr. web designer</span> | all rights reserved
-      </div>
-    </section>
+        <section class="about" id="about">
+          <h1 class="heading"><span>About</span> Us</h1>
+          <div class="row">
+            <div class="image">
+              <img src="Coffee/FlatWhiteCoffe.webp" />
+            </div>
+            <div class="content">
+              <h3>what makes our coffee special?</h3>
+              <p>
+                Coffee’s story begins centuries ago in the ancient coffee
+                forests of Ethiopia. Legend has it that a goat herder named
+                Kaldi discovered coffee when he noticed his goats became
+                energetic after eating berries from a certain tree. This
+                discovery sparked a journey that took coffee from Africa to the
+                Middle East, Europe, and eventually the rest of the world.
+                Today, coffee is one of the most beloved beverages, connecting
+                people across cultures with its rich aroma and invigorating
+                taste.
+              </p>
+              <a class="btn">learn more</a>
+            </div>
+          </div>
+        </section>
 
-    <script src="index.js"></script>
+        <section class="menu" id="menu">
+          <h1 class="heading">Our<span> Menu</span></h1>
+          <div class="box-container">
+            <div class="box">
+              <img src="Coffee/CafeCubanoCoffe.webp" />
+              <h3>CafeCubanoCoffe</h3>
+              <div class="price">₹250<span>₹300</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="box">
+              <img src="Coffee/CaffeBreveCoffe.webp" />
+              <h3>CaffeBreveCoffe</h3>
+              <div class="price">₹200<span>₹280</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="box">
+              <img src="Coffee/Cappuccinocoffe.webp" />
+              <h3>Cappuccinocoffe</h3>
+              <div class="price">₹180<span>₹260</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="box">
+              <img src="Coffee/ColdBrewCoffe.webp" />
+              <h3>ColdBrewCoffe</h3>
+              <div class="price">₹350<span>₹450</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="box">
+              <img src="Coffee/CortadoCoffe.webp" />
+              <h3>CortadoCoffe</h3>
+              <div class="price">₹250<span>₹300</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="box">
+              <img src="Coffee/RafCoffe.webp" />
+              <h3>RafCoffe</h3>
+              <div class="price">₹200<span>₹250</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+        </section>
+        <section class="products" id="products">
+          <h1 class="heading">Our <span>Products</span></h1>
+          <div class="box-container">
+            <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a class="fas fa-share"></a>
+                <a class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="Coffee/packging2.jpg" />
+              </div>
+              <div class="content">
+                <h3>Jarved</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">₹550<span>₹600</span></div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a class="fas fa-share"></a>
+                <a class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="Coffee/packaging1.jpg" />
+              </div>
+              <div class="content">
+                <h3>Cotential</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">₹329<span>₹400</span></div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a class="fas fa-share"></a>
+                <a class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="Coffee/packaging3.jpg" />
+              </div>
+              <div class="content">
+                <h3>Vanilla</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">₹480<span>₹550</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="review" id="review">
+          <h1 class="heading">Customer's <span>Review</span></h1>
+          <div class="box-container">
+            <div class="box">
+              <img src="Coffee/quotes.jpg" alt="" class="quote" />
+              <p>
+                "The Cold Brew Delight is my go-to when I need a refreshing
+                pick-me-up. It's smooth and strong, with just the right balance
+                of sweetness. Perfect for those hot days when you want something
+                that’s both energizing and cool!"
+              </p>
+              <img src="Coffee/men1.avif" style="margin-top: 28px" alt="" />
+              <h3>— James H.</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-halt-alt"></i>
+              </div>
+            </div>
+            <div class="box">
+              <img src="Coffee/quotes.jpg" alt="" class="quote" />
+              <p>
+                "The Creamy Latte Bliss is everything I’ve been looking for in a
+                latte. It’s so creamy and smooth, with a lovely sweetness that
+                isn’t overpowering. I love how it makes me feel relaxed and
+                energized at the same time. Definitely a new favorite!"
+              </p>
+              <img
+                src="Coffee/women3.avif"
+                style="border-radius: 50px"
+                alt=""
+              />
+              <h3>— Olivia W.</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-halt-alt"></i>
+              </div>
+            </div>
+            <div class="box">
+              <img src="Coffee/quotes.jpg" alt="" class="quote" />
+              <p>
+                "If you're serious about coffee, the Bold Black Brew is a
+                game-changer. It’s rich, full-bodied, and packs a punch. No
+                frills, just excellent coffee. It’s the only way I start my
+                mornings."
+              </p>
+              <img
+                src="Coffee/men23.avif"
+                style="margin-top: 60px; border-radius: 50px"
+              />
+              <h3>— John P.</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-halt-alt"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <h1 class="heading"><span>Contact</span> Us</h1>
+          <div class="row">
+            <div class="mapswrapper">
+              <iframe
+                width="600"
+                height="450"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=hyderabad&zoom=10&maptype=roadmap"
+              ></iframe
+              ><a href="https://www.taxuni.com/passport-renewal-form/"
+                >Passport Renewal Forms Printable</a
+              ><style>
+                .mapswrapper {
+                  background: #fff;
+                  position: relative;
+                }
+                .mapswrapper iframe {
+                  border: 0;
+                  position: relative;
+                  z-index: 2;
+                }
+                .mapswrapper a {
+                  color: rgba(0, 0, 0, 0);
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  z-index: 0;
+                }
+              </style>
+            </div>
+            <form action="">
+              <h3>get in touch</h3>
+              <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="name" />
+              </div>
+              <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="email" />
+              </div>
+              <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" placeholder="number" />
+              </div>
+              <input type="submit" value="contact now" class="btn" />
+            </form>
+          </div>
+        </section>
+
+        <section class="blogs" id="blogs">
+          <h1 class="heading">Our <span>Blogs</span></h1>
+          <div class="box-container">
+            <div class="box">
+              <div class="image">
+                <img src="Coffee/TurkishCoffe.webp" alt="" />
+              </div>
+              <div class="content">
+                <a class="title">Turkish Coffee</a>
+                <span>by admin/ 2st june,2024</span>
+                <p>
+                  Normal coffee, or milk coffee, is a comforting classic that
+                  combines the strength of brewed coffee with the creaminess of
+                  milk. Sweetened to taste, it’s a perfect balance of richness
+                  and smoothness, making it ideal for any time of day. From the
+                  frothy cappuccino to a simple cup of coffee with milk and
+                  sugar, this versatile favorite is the go-to choice for a warm,
+                  satisfying sip.
+                </p>
+                <a class="btn" style="margin-top: 40px">read more</a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="Coffee/PiccoloLatteCoffe.webp" alt="" />
+              </div>
+              <div class="content">
+                <a class="title">PiccoloLatte Coffee</a>
+                <span>by admin/ 1st may,2024</span>
+                <p>
+                  Cold coffee is a refreshing delight for hot days, offering a
+                  chilled twist to your favorite brew. Made by blending coffee
+                  with ice, milk, and sometimes a hint of sugar or flavorings
+                  like vanilla or caramel, it delivers a creamy, invigorating
+                  taste. Perfect as a pick-me-up or a dessert-like treat, cold
+                  coffee is versatile—enjoy it with whipped cream on top or as a
+                  simple iced coffee to cool down and energize your day.
+                </p>
+                <a class="btn">read more</a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="Coffee/LongBlackCoffe.webp" alt="" />
+              </div>
+              <div class="content">
+                <a class="title">LongBlack Coffee</a>
+                <span>by admin/ 5st April,2024</span>
+                <p>
+                  Black coffee is the purest form of coffee, loved for its bold,
+                  robust flavor. With no milk or sugar, it highlights the true
+                  essence of the coffee beans, offering a rich and aromatic
+                  experience. It’s a favorite among coffee enthusiasts for its
+                  simplicity and health benefits—low in calories and packed with
+                  antioxidants. Whether enjoyed hot or as an iced black coffee,
+                  this classic brew is perfect for those who appreciate an
+                  authentic coffee experience.
+                </p>
+                <a class="btn">read more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="footer">
+          <div class="share">
+            <a class="fab fa-facebook-f"></a>
+            <a class="fab fa-twitter"></a>
+            <a class="fab fa-instagram"></a>
+            <a class="fab fa-linkedin"></a>
+            <a class="fab fa-pinterest"></a>
+          </div>
+          <div class="links">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+            <a href="#">products</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+            <a href="#">blogs</a>
+          </div>
+          <div class="credit">
+            created by <span>mr. web designer</span> | all rights reserved
+          </div>
+        </section>
+
+        <script src="index.js"></script>
+      </body>
+    </html>
   </body>
 </html>

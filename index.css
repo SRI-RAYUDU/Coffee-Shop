@@ -49,7 +49,6 @@ section {
 .heading {
     text-align: center;
     color: #fff;
-    /* text-transform: uppercase; */
     padding-bottom: 3.5rem;
     font-size: 4rem;
 }
@@ -59,7 +58,6 @@ section {
 }
 
 .btn {
-    margin-top: 1rem;
     display: inline-block;
     padding: .9rem 3rem;
     font-size: 1.7rem;
@@ -72,7 +70,7 @@ section {
     letter-spacing: .2rem;
 }
 
-/* Header Styles - Normal */
+
 .header {
     background: var(--bg);
     display: flex;
@@ -92,7 +90,7 @@ section {
 }
 
 .header .navbar {
-    margin-left: 130px;;
+    margin-left: 130px;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -100,7 +98,7 @@ section {
 }
 
 .header .nav-links {
-   align-items: center;
+    align-items: center;
     display: flex;
     gap: 2rem;
     list-style: none;
@@ -140,94 +138,115 @@ section {
 }
 
 .header .search-form {
-    position: absolute;
-    top: 115%;
-    right: 7%;
-    background: #fff;
-    width: 50rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header .search-form.active {
-    transform: scaleY(1);
-  }
-  
-  .header .search-form input {
-    height: 100%;
-    width: 100%;
-    font-size: 1.6rem;
-    color: var(--black);
-    padding: 1rem;
-    border: none;
-    text-transform: none;
-    outline: none;
-  }
-  
-  .header .search-form label {
-    cursor: pointer;
-    font-size: 2.2rem;
-    margin-right: 1.5rem;
-    color: var(--black);
-  }
-  
-  .header .search-form label:hover {
-    color: var(--main-color);
-  }
-  
-  #search-box {
-    width: calc(100% - 50px); /* Adjust for icon space */
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-  }
-  
-  #search-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--black);
-  }
-  
-  #suggestions {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-height: 150px;
-    overflow-y: auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
-    z-index: 1000;
-  }
-  
-  #suggestions div {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  #suggestions div:hover {
-    background-color: #f0f0f0;
-  }
-  
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+  border: none;
+  text-transform: none;
+  outline: none;
+}
+
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+}
+
+.header .search-form label:hover {
+  color: var(--main-color);
+}
+
+#search-box {
+  width: calc(100% - 50px);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+#search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+#suggestions .suggested-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+#suggestions .suggested-item img {
+  height: 6rem;
+  width: 6rem;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#suggestions .suggested-item h3 {
+  font-size: 1.6rem;
+  color: var(--black);
+  margin: 0;
+}
+
+#suggestions .suggested-item .price {
+  font-size: 1.4rem;
+  color: var(--main-color);
+}
+
+#suggestions .suggested-item:hover {
+  background-color: #f0f0f0;
+}
 
 .header .cart-items-container {
     position: absolute;
@@ -237,11 +256,12 @@ section {
     width: 35rem;
     background: #fff;
     padding: 0 1.5rem;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
 }
 
 .header .cart-items-container.active {
-    right: 0;
-}
+    right: 0; 
 
 .header .cart-items-container .cart-item {
     position: relative;
@@ -266,27 +286,46 @@ section {
 
 .header .cart-items-container .cart-item img {
     height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.header .cart-items-container .cart-item .content {
+    flex: 1;
 }
 
 .header .cart-items-container .cart-item .content h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--black);
-    padding-bottom: 5rem;
+    margin-bottom: 0.5rem;
 }
 
 .header .cart-items-container .cart-item .content .price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--main-color);
 }
 
-.header .cart-items-container #checkout-btn{
+/* Checkout Button */
+.header .cart-items-container #checkout-btn {
     width: 50%;
     height: 40px;
+    margin: 2rem auto;
     text-align: center;
     justify-content: center;
     align-items: center;
     background: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
+
+.header .cart-items-container #checkout-btn:hover {
+    background: #b28c4c;
+}
+
 
 .home {
     min-height: 100vh;
@@ -317,7 +356,7 @@ section {
     color: #eee;
 }
 
-/* Continue remaining styles (about, menu, products, review, contact, blogs, footer, etc.) */
+
 
 .about .row{
     display:flex;
@@ -585,8 +624,11 @@ section {
     color:var(--main-color);
     font-weight:600;
 }
-
-
+.footer .links a{
+    font-size:14px;
+    color:var(--main-color);
+   padding:3px
+}
 @media (max-width: 991px) {
     html {
         font-size: 55%;
@@ -601,7 +643,7 @@ section {
     }
 
     .header .navbar {
-        display: none; /* Initially hide navbar on small screens */
+        display: none;
         position: absolute;
         top: 100%;
         right: -100%;
@@ -615,12 +657,12 @@ section {
     }
 
     .header .navbar.active {
-        right: 0; /* Show navbar when active */
-        display: flex; /* Ensures navbar is displayed */
+        right: 0;
+        display: flex;
     }
 
     #menu-btn {
-        display: block; /* Display menu button on smaller devices */
+        display: block;
     }
 
     .header .nav-links a {
@@ -634,7 +676,7 @@ section {
     .header .search-form {
         width: 90%;
         right: 2rem;
-        display: none; /* Hide search form initially */
+        display: none;
     }
 
     .header .cart-items-container {
@@ -645,6 +687,8 @@ section {
         width: 35rem;
         background: #fff;
         padding: 0 1.5rem;
+        overflow-y: auto;
+        transition: right 0.3s ease-in-out;
     }
 
     .header .cart-items-container.active {
@@ -664,9 +708,27 @@ section {
     .home-content p {
         font-size: 1.5rem;
     }
+
+
+    #suggestions {
+        max-height: 150px; 
+    }
+
+    #suggestions .suggested-item img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    #suggestions .suggested-item h3 {
+        font-size: 1.4rem;
+    }
+
+    #suggestions .suggested-item .price {
+        font-size: 1.2rem;
+    }
 }
 
-/* Small Devices (Phones) */
+
 @media (max-width: 450px) {
     html {
         font-size: 50%;
@@ -679,7 +741,8 @@ section {
     .header .navbar {
         display: none;
     }
-    .header .navbar .nav-links{
+
+    .header .navbar .nav-links {
         display: block;
     }
 
@@ -689,13 +752,12 @@ section {
 
     .header .search-form {
         width: 100%;
-        right: 2rem;
+        right: 0;
         position: absolute;
         top: 100%;
-        right: 0;
         background: #fff;
         padding: 1rem;
-        display: none; /* Hide search form initially */
+        display: none;
     }
 
     .header .cart-items-container {
@@ -714,13 +776,30 @@ section {
         font-size: 1.3rem;
     }
 
-    /* When search form is active, show it properly */
     .header .search-form.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .navbar.active {
         display: flex;
     }
 
-    /* Show menu items on small devices when active */
-    .header .navbar.active {
-        display: flex; /* Show navbar when active */
+    #suggestions {
+        max-height: 100px;
     }
+
+    #suggestions .suggested-item img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    #suggestions .suggested-item h3 {
+        font-size: 1.2rem;
+    }
+
+    #suggestions .suggested-item .price {
+        font-size: 1rem;
+    }
+}
 }
