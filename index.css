@@ -337,7 +337,7 @@ section {
 }
 
 .home .content h3 {
-  margin-top: 6px;
+  margin-top: 12px;
   font-size: 5rem;
   text-transform: uppercase;
   color: #fff;
@@ -348,6 +348,7 @@ section {
   font-weight: lighter;
   line-height: 1.8;
   padding: 1rem 0;
+  
   color: #eee;
 }
 

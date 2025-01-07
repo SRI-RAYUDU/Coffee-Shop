@@ -75,7 +75,7 @@
         <section class="home" id="home">
           <div class="content">
             <h3>fresh coffee in the morning</h3>
-            <p>
+            <p><b><i>
               Step into a world where coffee meets passion and community
               thrives. At our coffee shop, we take pride in crafting every cup
               with care, using only the finest, ethically sourced beans to
@@ -84,7 +84,7 @@
               creativity, our cozy space is designed to make you feel right at
               home. With a menu filled with signature brews, handcrafted treats,
               and a commitment to sustainability, we aim to make every visit as
-              delightful as the first sip of your favorite coffee.
+              delightful as the first sip of your favorite coffee.</i></b>
             </p>
             <a class="btn">get yours now</a>
           </div>
@@ -97,22 +97,20 @@
               <img src="Coffee/FlatWhiteCoffe.webp" />
             </div>
             <div class="content">
-              <h3>what makes our coffee special?</h3>
-              <p>
-                Coffee’s story begins centuries ago in the ancient coffee
-                forests of Ethiopia. Legend has it that a goat herder named
-                Kaldi discovered coffee when he noticed his goats became
-                energetic after eating berries from a certain tree. This
-                discovery sparked a journey that took coffee from Africa to the
-                Middle East, Europe, and eventually the rest of the world.
-                Today, coffee is one of the most beloved beverages, connecting
-                people across cultures with its rich aroma and invigorating
-                taste.
+              <h3>What makes our coffee special?</h3>
+              <p id="main-text">
+                Coffee’s story begins centuries ago in the ancient coffee forests of Ethiopia. Legend has it that a goat herder named Kaldi discovered coffee when he noticed his goats became energetic after eating berries from a certain tree. This discovery sparked a journey that took coffee from Africa to the Middle East, Europe, and eventually the rest of the world. Today, coffee is one of the most beloved beverages, connecting people across cultures with its rich aroma and invigorating taste.
               </p>
-              <a class="btn">learn more</a>
+              <div id="extra-content" style="display: none;">
+                <p>
+                  Over time, coffee has evolved into a cultural phenomenon. From the bustling cafés of Paris to the cozy coffee shops in every corner of the world, coffee has become more than just a drink. It has transformed into an experience—one that brings people together, sparks creativity, and fuels conversations. Whether it’s a cup shared between friends or a solo moment of reflection, coffee continues to be a source of comfort and inspiration.
+                </p>
+              </div>
+              <a class="btn" id="learn-more-btn">Learn More</a>
             </div>
           </div>
         </section>
+        
 
         <section class="menu" id="menu">
           <h1 class="heading">Our<span> Menu</span></h1>
@@ -318,37 +316,47 @@
                 }
               </style>
             </div>
+        
             <form id="contactForm">
               <h3>Get in touch</h3>
               <div class="inputBox">
                 <span class="fas fa-user"></span>
-                <input type="text" placeholder="Name" id="name" required />
+                <input type="text" placeholder="Your Name" id="name" required />
               </div>
               <div class="inputBox">
                 <span class="fas fa-envelope"></span>
-                <input type="email" placeholder="Email" id="email" required />
+                <input
+                  type="email"
+                  placeholder="Your Email (e.g. yourname@example.com)"
+                  id="email"
+                  required
+                />
               </div>
               <div class="inputBox">
                 <span class="fas fa-phone"></span>
                 <input
-                  type="number"
-                  placeholder="Number"
+                  type="tel"
+                  placeholder="Your Phone Number"
                   id="number"
                   required
+                  pattern="^[0-9]{10}$"
+                  title="Please enter a valid 10-digit phone number"
                 />
               </div>
+              
               <input type="submit" value="Contact Now" class="btn" />
-
+        
               <div
                 id="successMessage"
                 class="successMessage"
                 style="display: none"
               ></div>
             </form>
-
+        
             <div id="contact-now-btn"></div>
           </div>
         </section>
+        
 
         <section class="blogs" id="blogs">
           <h1 class="heading">Our <span>Blogs</span></h1>

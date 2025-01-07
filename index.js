@@ -8,16 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('.search-form');
   const suggestionsContainer = document.getElementById('suggestions');
   const cartContainer = document.querySelector('.cart-items-container');
-  const cartItemsContainer = document.querySelector(
-    '.cart-items-container .cart-items'
-  );
+  const cartItemsContainer = document.querySelector('.cart-items-container .cart-items');
   const cartItemCount = document.querySelector('#cart-item-count');
   const cartTotalPrice = document.querySelector('#cart-total-price');
   const checkoutBtn = document.querySelector('#checkout-btn');
   const addToCartButtons = document.querySelectorAll('.menu .box .btn');
-  const productCartLinks = document.querySelectorAll(
-    '.products .box .fas.fa-shopping-cart'
-  );
+  const productCartLinks = document.querySelectorAll('.products .box .fas.fa-shopping-cart');
   const shareLinks = document.querySelectorAll('.products .box .fas.fa-share');
   const eyeIcons = document.querySelectorAll('.products .box .fas.fa-eye');
 
@@ -27,6 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let totalItems = 0;
   let totalPrice = 0;
+
+  const learnMoreBtn = document.getElementById('learn-more-btn');
+  const extraContent = document.getElementById('extra-content');
+
+  learnMoreBtn.addEventListener('click', () => {
+    if (extraContent.style.display === 'none' || extraContent.style.display === '') {
+      extraContent.style.display = 'block';
+      learnMoreBtn.textContent = 'Show Less';
+    } else {
+      extraContent.style.display = 'none';
+      learnMoreBtn.textContent = 'Learn More';
+    }
+  });
 
   function closeAll() {
     navbar.classList.remove('active');
@@ -46,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const isActive = searchForm.classList.contains('active');
     closeAll();
     if (!isActive) searchForm.classList.add('active');
+    searchBox.value = ''; 
+    suggestionsContainer.innerHTML = ''; 
+    suggestionsContainer.style.display = 'none'; 
   });
 
   cartBtn.addEventListener('click', () => {
@@ -104,9 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', (event) => {
       const itemBox = event.target.closest('.box');
       const itemName = itemBox.querySelector('h3').textContent;
-      const itemPrice = parseFloat(
-        itemBox.querySelector('.price').textContent.replace('₹', '')
-      );
+      const itemPrice = parseFloat(itemBox.querySelector('.price').textContent.replace('₹', ''));
       const itemImageSrc = itemBox.querySelector('img').src;
       addToCart(itemName, itemPrice, itemImageSrc);
     });
@@ -116,9 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (event) => {
       const productBox = event.target.closest('.box');
       const itemName = productBox.querySelector('h3').textContent;
-      const itemPrice = parseFloat(
-        productBox.querySelector('.price').textContent.replace('₹', '')
-      );
+      const itemPrice = parseFloat(productBox.querySelector('.price').textContent.replace('₹', ''));
       const itemImageSrc = productBox.querySelector('img').src;
       addToCart(itemName, itemPrice, itemImageSrc);
     });
@@ -168,14 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
         foundItems.forEach((item) => {
           const suggestionItem = document.createElement('div');
           suggestionItem.classList.add('suggested-item');
-          const mainPrice = item
-            .querySelector('.price')
-            .childNodes[0].textContent.trim();
+          const mainPrice = item.querySelector('.price').childNodes[0].textContent.trim();
 
           suggestionItem.innerHTML = `
-            <img src="${item.querySelector('img').src}" alt="${
-            item.querySelector('h3').textContent
-          }">
+            <img src="${item.querySelector('img').src}" alt="${item.querySelector('h3').textContent}">
             <h3>${item.querySelector('h3').textContent}</h3>
             <div class="price">${mainPrice}</div>
           `;
@@ -196,25 +200,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalPriceInCart = 0;
     const cartItems = cartItemsContainer.querySelectorAll('.cart-item');
     cartItems.forEach((item) => {
-      const price = parseFloat(
-        item.querySelector('.price').textContent.replace('₹', '')
-      );
+      const price = parseFloat(item.querySelector('.price').textContent.replace('₹', ''));
       totalPriceInCart += price;
     });
 
-    const totalPriceContainer = document.querySelector(
-      '.cart-items-container .total-price'
-    );
+    const totalPriceContainer = document.querySelector('.cart-items-container .total-price');
     if (totalPriceContainer) {
-      totalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(
-        2
-      )}`;
+      totalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(2)}`;
     } else {
       const newTotalPriceContainer = document.createElement('div');
       newTotalPriceContainer.classList.add('total-price');
-      newTotalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(
-        2
-      )}`;
+      newTotalPriceContainer.textContent = `Total Price: ₹${totalPriceInCart.toFixed(2)}`;
       cartContainer.appendChild(newTotalPriceContainer);
     }
   });
